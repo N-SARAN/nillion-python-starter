@@ -124,7 +124,7 @@ async def main():
     )
 
     # 8. Return the computation result
-    print(f"The computation was sent to the network. compute_id: {compute_id}")
+    print(f"Computation was sent to the network. compute_id: {compute_id}")
     while True:
         compute_event = await client.next_compute_event()
         if isinstance(compute_event, nillion.ComputeFinishedEvent):
