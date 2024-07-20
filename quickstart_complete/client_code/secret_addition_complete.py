@@ -69,8 +69,8 @@ async def main():
         {
             "my_int1": nillion.SecretInteger(500),
             "a": nillion.SecretInteger(1),
-            "b": nillion.SecretInteger(-3),
-            "c": nillion.SecretInteger(2),
+            "b": nillion.SecretInteger(-4),
+            "c": nillion.SecretInteger(4),
         }
     )
 
@@ -129,9 +129,9 @@ async def main():
         compute_event = await client.next_compute_event()
         if isinstance(compute_event, nillion.ComputeFinishedEvent):
             print(f"✅  Compute complete for compute_id {compute_event.uuid}")
-            print(f"🖥️  The result is {compute_event.result.value}")
+            print(f"🖥  The result is {compute_event.result.value}")
             return compute_event.result.value
 
 
-if __name__ == "__main__":
+if __name__ == "main":
     asyncio.run(main())

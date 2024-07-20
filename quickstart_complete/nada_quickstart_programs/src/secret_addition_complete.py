@@ -31,7 +31,7 @@ def nada_main():
     two_a = a * Integer(2)
     neg_b = b * Integer(-1)
 
-    r8 = (neg_b + sqrt_discriminant) / two_a
+    r8 = (neg_b + sqrt_discriminant) /two_a
     r9 = (neg_b - sqrt_discriminant) / two_a
     
 
@@ -39,14 +39,11 @@ def nada_main():
     out1 = Output(r1, "Maximum of two Numbers", party1)
     out2 = Output(r, "Multiplication of Two Numbers", party1)
     out3 = Output(r3, "Division of Two Numbers", party1)
-    out5 = Output(r5, "Welcome to Hacker House GOA 2024", party1)
     out4 = Output(r4, "(a^2-b^2)=(a+b)(a-b) =", party1)
-    out6 = Output(r6, "(a^3+b^3)=(a+b)(a^2-ab-b^2) =", party1)
-
-   
-    out7 = Output(r8, "Root 1 of the quadratic equation", party1)
+    out5 = Output(r8, "Root 1 of the quadratic equation 1x^2-4x+4=0", party1)
+    out6 = Output(r9, "Root 2 of the quadratic equation 1x^2-4x+4=0", party1)
     
    
 
    
-    return [out1, out7]
+    return [out5, out6, out1,out2,out3,out4]
